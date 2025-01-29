@@ -1,5 +1,7 @@
 #!/bin/bash
 
+WORKDIR="$(pwd)"
+
 # Clean up old manifests and repos
 rm -rf .repo/local_manifests
 rm -rf frameworks/base
@@ -15,6 +17,10 @@ git clone https://github.com/XeroMz69/manifest-lokal.git -b pb-a14 .repo/local_m
 # Sync repos
 /opt/crave/resync.sh
 
+# Some fixes
+rm -rf $WORKDIR/vendor/xiaomi
+git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git $WORKDIR/vendor/xiaomi/earth --depth 1
+
 # Export environment variables
 export BUILD_USERNAME=Xero
 export BUILD_HOSTNAME=crave
@@ -25,20 +31,7 @@ export TZ=Asia/Jakarta
 
 # Set up the build environment
 source build/envsetup.sh
-
-# Try the first lunch option
-if lunch blaze_earth-ap3a-userdebug; then
-    echo "Successfully set lunch to blaze_earth-ap3a-userdebug"
-    
-# Try the second lunch option if the first one fails
-elif lunch blaze_earth-ap2a-userdebug; then
-    echo "First lunch failed, successfully set lunch to blaze_earth-ap2a-userdebug"
-        
-# If all lunch options fail, exit with an error
-else
-    echo "All lunch options failed!"
-    exit 1
-fi
+lunch blaze_earth-ap3a-userdebug
 
 # Clean and build
 make installclean
