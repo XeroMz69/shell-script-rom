@@ -3,13 +3,10 @@
 # Clean up old manifests and repos
 rm -rf .repo/local_manifests
 rm -rf frameworks/base
-rm -rf device/lineage/sepolicy
-rm -rf vendor/lineage
-rm -rf packages/overlays/Lineage
 rm -rf packages/apps/Launcher3
 
 # Initialize repo
-repo init -u https://github.com/Miku-UI/manifesto -b Vampire_v2
+repo init -u https://github.com/XeroMz69/manifesto -b Vampire_v2
 git clone https://github.com/XeroMz69/manifest-lokal.git -b vampire .repo/local_manifests
 
 # Sync repos
