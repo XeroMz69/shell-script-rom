@@ -17,10 +17,11 @@ git clone https://github.com/XeroMz69/manifest-lokal.git -b vampire .repo/local_
 
 # Some fixes
 rm -rf prebuilts/clang/host/linux-x86/clang-proton
-mkdir -p prebuilts/clang/host/linux-x86/clang-proton
-wget $CLANG_DLINK
-tar -C prebuilts/clang/host/linux-x86/clang-proton/ -zxvf Xero-Clang-20.0.0git-20250113.tar.gz
-rm -rf Xero-Clang-20.0.0git-20250113.tar.gz
+git clone https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git prebuilts/clang/host/linux-x86/clang-proton --depth 1 
+# mkdir -p prebuilts/clang/host/linux-x86/clang-proton
+# wget $CLANG_DLINK
+# tar -C prebuilts/clang/host/linux-x86/clang-proton/ -zxvf Xero-Clang-20.0.0git-20250113.tar.gz
+# rm -rf Xero-Clang-20.0.0git-20250113.tar.gz
 
 # Export environment variables
 export TARGET_RELEASE=ap4a
