@@ -7,6 +7,7 @@ WORKDIR="$(pwd)"
 rm -rf .repo/local_manifests
 rm -rf frameworks/base
 rm -rf packages/apps/Launcher3
+rm -rf hardware/miku
 
 # Initialize repo
 repo init -u https://github.com/XeroMz69/manifesto -b Vampire_v2
