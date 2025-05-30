@@ -27,15 +27,15 @@ cd $WORKDIR
 rm -rf $WORKDIR/prebuilts/clang/host/linux-x86/clang-xero
 mkdir -p $WORKDIR/prebuilts/clang/host/linux-x86/clang-xero
 wget $CLANG_DLINK
-tar -C $WORKDIR/prebuilts/clang/host/linux-x86/clang-los/ -zxvf Xero-Clang-20.0.0git-20250113.tar.gz
-rm -rf Xero-Clang-20.0.0git-20250113.tar.gz
+tar -C $WORKDIR/prebuilts/clang/host/linux-x86/clang-los/ -zxvf Xero-Clang-21.0.0git-20250526.tar.gz
+rm -rf Xero-Clang-21.0.0git-20250526.tar.gz
 # rm -rf $WORKDIR/packages/apps/FMRadio
 # git clone https://github.com/LineageOS/android_packages_apps_FMRadio.git $WORKDIR/packages/apps/FMRadio
 
 # Some flags
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
-export BUILD_USERNAME=xero
-export KBUILD_USERNAME=xero
+export BUILD_USERNAME=Xero
+export KBUILD_USERNAME=Xero
 export BUILD_HOSTNAME=crave
 export KBUILD_HOSTNAME=crave
 export TZ=Asia/Jakarta
