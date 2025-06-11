@@ -15,11 +15,11 @@ git clone https://github.com/XeroMz69/manifest-lokal.git -b lineage-20 .repo/loc
 rm -rf $WORKDIR/vendor/xiaomi
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-21 $WORKDIR/vendor/xiaomi/earth --depth 1
 cd $WORKDIR
-rm -rf $WORKDIR/prebuilts/clang/host/linux-x86/clang-xero
-mkdir -p $WORKDIR/prebuilts/clang/host/linux-x86/clang-xero
-wget $CLANG_DLINK
-tar -C $WORKDIR/prebuilts/clang/host/linux-x86/clang-los/ -zxvf Xero-Clang-21.0.0git-20250526.tar.gz
-rm -rf Xero-Clang-21.0.0git-20250526.tar.gz
+# rm -rf $WORKDIR/prebuilts/clang/host/linux-x86/clang-xero
+# mkdir -p $WORKDIR/prebuilts/clang/host/linux-x86/clang-xero
+# wget $CLANG_DLINK
+# tar -C $WORKDIR/prebuilts/clang/host/linux-x86/clang-los/ -zxvf Xero-Clang-21.0.0git-20250526.tar.gz
+# rm -rf Xero-Clang-21.0.0git-20250526.tar.gz
 # rm -rf $WORKDIR/packages/apps/FMRadio
 # git clone https://github.com/LineageOS/android_packages_apps_FMRadio.git $WORKDIR/packages/apps/FMRadio
 
