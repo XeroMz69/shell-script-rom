@@ -5,6 +5,7 @@ WORKDIR="$(pwd)"
 
 # Remove some old shit
 rm -rf .repo/local_manifests/
+rm -rf device/xiaomi/earth
 
 # Syncing the Lineage repo
 repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
@@ -35,5 +36,5 @@ export TZ=Asia/Jakarta
 . build/envsetup.sh
 
 # LineageOS 20
-make installclean
+# make installclean
 brunch earth
