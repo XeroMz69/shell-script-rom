@@ -14,7 +14,7 @@ git clone https://github.com/XeroMz69/manifest-lokal.git -b lineage-20 .repo/loc
 
 # Some fixes
 rm -rf $WORKDIR/vendor/xiaomi
-git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-21 $WORKDIR/vendor/xiaomi/earth --depth 1
+git clone https://github.com/XeroMz69/proprietary_vendor_xiaomi_earth.git -b experimental/lineage-20 $WORKDIR/vendor/xiaomi/earth --depth 1
 cd $WORKDIR
 # rm -rf $WORKDIR/prebuilts/clang/host/linux-x86/clang-xero
 # mkdir -p $WORKDIR/prebuilts/clang/host/linux-x86/clang-xero
@@ -36,5 +36,5 @@ export TZ=Asia/Jakarta
 . build/envsetup.sh
 
 # LineageOS 20
-# make installclean
+make installclean
 brunch earth
