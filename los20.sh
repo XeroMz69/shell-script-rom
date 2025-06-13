@@ -36,5 +36,5 @@ export TZ=Asia/Jakarta
 . build/envsetup.sh
 
 # LineageOS 20
-make installclean
+#make installclean
 brunch earth
