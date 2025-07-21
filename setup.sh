@@ -8,6 +8,8 @@ echo "$user:$password" | chpasswd
 sudo echo "xero ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers
 
 # Configure SSH
+sudo apt update -y
+sudo apt full-upgrade -y
 sudo apt install openssh-server -y
 sudo service ssh start
 wget https://github.com/cloudflare/cloudflared/releases/download/2025.7.0/cloudflared-linux-amd64.deb
