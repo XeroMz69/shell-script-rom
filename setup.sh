@@ -4,7 +4,7 @@
 user=xero
 password=xero
 sudo useradd -m -s /bin/bash -G users xero
-echo "$user:$password" | chpasswd
+sudo echo "$user:$password" | sudo chpasswd
 sudo echo "xero ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers
 
 # Configure SSH
