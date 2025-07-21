@@ -5,7 +5,7 @@ user=xero
 password=xero
 sudo useradd -m -s /bin/bash -G users xero
 sudo echo "$user:$password" | sudo chpasswd
-sudo echo "xero ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+sudo su -c "echo "xero ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers"
 
 # Configure SSH
 sudo apt update -y
